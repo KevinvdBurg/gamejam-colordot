@@ -4,6 +4,7 @@ using System.Collections;
 public class Empty : MonoBehaviour {
 
 	public MixController mixController;
+	public Gamecontroller gamecontroller;
 
 	// Use this for initialization
 	void Start () {
@@ -22,5 +23,6 @@ public class Empty : MonoBehaviour {
 
 	public void SelectObject(){
 		mixController.ResetColor ();
+		gamecontroller.newColor ();
 	}
 }

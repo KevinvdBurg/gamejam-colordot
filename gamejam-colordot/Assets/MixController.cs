@@ -109,5 +109,6 @@ public class MixController : MonoBehaviour {
 		currentColors ["Red"] = 0;
 		currentColors ["Yellow"] = 0;
 		currentColors ["Blue"] = 0;
+		this.GetComponent<Renderer> ().material.color = new Color (255, 255, 255);
 	}
 }
