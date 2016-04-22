@@ -86,7 +86,7 @@ public class MixController : MonoBehaviour {
         //
         //		Debug.Log (output);
 
-        this.GetComponent<Renderer>().material.color = UpdateColor();
+        //this.GetComponent<Renderer>().material.color = UpdateColor();
 
         if (gamecontroller.GameStarted) {
 			currentColors[other.GetComponentInChildren<CColor> ().Name] += 1;
