@@ -5,6 +5,8 @@ public class DragObjectKinect : MonoBehaviour {
 
     public GameObject HandL;
     public GameObject HandR;
+    public GameObject Mix;
+    public GameObject Bucket;
 
 	// Use this for initialization
 	private Vector3 screenPoint;
@@ -50,6 +52,22 @@ public class DragObjectKinect : MonoBehaviour {
             MoveDrag(HandR.transform.position.x, HandR.transform.position.y);
         }
     }
+
+    public void MixTrigger()
+    {
+        MoveUp();
+        if (grabbedL)
+        {
+            grabbedL = false;
+            HandL.GetComponent<HandControll>().Opgepakt = false;
+        }
+        else if (grabbedR)
+        {
+            grabbedR = false;
+            HandR.GetComponent<HandControll>().Opgepakt = false;
+        }
+    }
+
 
 	void MoveDown(float inputX, float inputY){
 		positionBeforeDrag = this.transform.position;

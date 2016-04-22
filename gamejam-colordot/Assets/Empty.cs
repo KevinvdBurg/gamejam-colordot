@@ -16,9 +16,9 @@ public class Empty : MonoBehaviour {
 	
 	}
 
-	void OnMouseDown()
+	void OnTriggerEnter(Collider other)
 	{
-		SelectObject ();
+		SelectObject();
 	}
 
 	public void SelectObject(){

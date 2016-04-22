@@ -24,8 +24,6 @@ public class MixController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 
-
-
 //		string output = "";
 //		foreach (CColor item in currentColors) {
 //			output += item.Name;
@@ -41,6 +39,7 @@ public class MixController : MonoBehaviour {
 			}
 		}
 
+        other.GetComponent<DragObjectKinect>().MixTrigger();
 
 	}
 		
