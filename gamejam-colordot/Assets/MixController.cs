@@ -24,51 +24,51 @@ public class MixController : MonoBehaviour {
 
     Color UpdateColor()
     {
-        if (currentColors.Contains(new KeyValuePair<string, int>("Red", 2)) && currentColors.Contains(new KeyValuePair<string, int>("Blue", 1)))
+        if (currentColors.Contains(new KeyValuePair<string, int>("Color Red", 2)) && currentColors.Contains(new KeyValuePair<string, int>("Color Blue", 1)))
         {
             return new Color(204, 0, 153);
         }
-        else if (currentColors.Contains(new KeyValuePair<string, int>("Red", 1)) && currentColors.Contains(new KeyValuePair<string, int>("Blue", 2)))
+        else if (currentColors.Contains(new KeyValuePair<string, int>("Color Red", 1)) && currentColors.Contains(new KeyValuePair<string, int>("Color Blue", 2)))
         {
             return new Color(102, 0, 153);
         }
-        else if (currentColors.Contains(new KeyValuePair<string, int>("Blue", 2)) && currentColors.Contains(new KeyValuePair<string, int>("Yellow", 1)))
+        else if (currentColors.Contains(new KeyValuePair<string, int>("Color Blue", 2)) && currentColors.Contains(new KeyValuePair<string, int>("Color Yellow", 1)))
         {
             return new Color(0, 0, 80);
         }
-        else if (currentColors.Contains(new KeyValuePair<string, int>("Blue", 1)) && currentColors.Contains(new KeyValuePair<string, int>("Yellow", 2)))
+        else if (currentColors.Contains(new KeyValuePair<string, int>("Color Blue", 1)) && currentColors.Contains(new KeyValuePair<string, int>("Color Yellow", 2)))
         {
             return new Color(102, 204, 0);
         }
-        else if (currentColors.Contains(new KeyValuePair<string, int>("Yellow", 2)) && currentColors.Contains(new KeyValuePair<string, int>("Red", 1)))
+        else if (currentColors.Contains(new KeyValuePair<string, int>("Color Yellow", 2)) && currentColors.Contains(new KeyValuePair<string, int>("Color Red", 1)))
         {
             return new Color(255, 204, 0);
         }
-        else if (currentColors.Contains(new KeyValuePair<string, int>("Yellow", 1)) && currentColors.Contains(new KeyValuePair<string, int>("Red", 2)))
+        else if (currentColors.Contains(new KeyValuePair<string, int>("Color Yellow", 1)) && currentColors.Contains(new KeyValuePair<string, int>("Color Red", 2)))
         {
             return new Color(255, 102, 0);
         }
-        else if (currentColors.Contains(new KeyValuePair<string, int>("Red", 1)) && currentColors.Contains(new KeyValuePair<string, int>("Blue", 1)))
+        else if (currentColors.Contains(new KeyValuePair<string, int>("Color Red", 1)) && currentColors.Contains(new KeyValuePair<string, int>("Color Blue", 1)))
         {
             return new Color(153, 0, 153);
         }
-        else if (currentColors.Contains(new KeyValuePair<string, int>("Blue", 1)) && currentColors.Contains(new KeyValuePair<string, int>("Yellow", 1)))
+        else if (currentColors.Contains(new KeyValuePair<string, int>("Color Blue", 1)) && currentColors.Contains(new KeyValuePair<string, int>("Color Yellow", 1)))
         {
             return new Color(0, 153, 0);
         }
-        else if (currentColors.Contains(new KeyValuePair<string, int>("Yellow", 1)) && currentColors.Contains(new KeyValuePair<string, int>("Red", 1)))
+        else if (currentColors.Contains(new KeyValuePair<string, int>("Color Yellow", 1)) && currentColors.Contains(new KeyValuePair<string, int>("Color Red", 1)))
         {
             return new Color(255, 153, 0);
         }
-        else if (currentColors.Contains(new KeyValuePair<string, int>("Red", 1)))
+        else if (currentColors.Contains(new KeyValuePair<string, int>("Color Red", 1)))
         {
             return Color.red;
         }
-        else if(currentColors.Contains(new KeyValuePair<string, int>("Blue", 1)))
+        else if(currentColors.Contains(new KeyValuePair<string, int>("Color Blue", 1)))
         {
             return Color.blue;
         }
-        else if(currentColors.Contains(new KeyValuePair<string, int>("Yellow", 1)))
+        else if(currentColors.Contains(new KeyValuePair<string, int>("Color Yellow", 1)))
         {
             return new Color(255, 255, 0);
         }
