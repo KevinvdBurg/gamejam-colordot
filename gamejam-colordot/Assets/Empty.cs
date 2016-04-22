@@ -19,6 +19,7 @@ public class Empty : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		SelectObject();
+        other.GetComponent<DragObjectKinect>().MixTrigger();
 	}
 
 	public void SelectObject(){
