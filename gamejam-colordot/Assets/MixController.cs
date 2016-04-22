@@ -11,6 +11,7 @@ public class MixController : MonoBehaviour {
 	public Dictionary<string, int> currentColors;
 
 
+
 	// Use this for initialization
 	void Start () {
 		ResetColor ();
@@ -18,12 +19,12 @@ public class MixController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
 
 	void OnTriggerEnter(Collider other) {
 
-		currentColors[other.GetComponentInChildren<CColor> ().Name] += 1;
+
 
 //		string output = "";
 //		foreach (CColor item in currentColors) {
@@ -31,9 +32,15 @@ public class MixController : MonoBehaviour {
 //		}
 //
 //		Debug.Log (output);
-		if (CheckColors ()) {
-			this.GetComponent<Renderer> ().material.color = gamecontroller.NeededColor.color;
+		if (gamecontroller.GameStarted) {
+			currentColors[other.GetComponentInChildren<CColor> ().Name] += 1;
+			if (CheckColors ()) {
+				this.GetComponent<Renderer> ().material.color = gamecontroller.NeededColor.color;
+				gamecontroller.score += 1;
+				gamecontroller.UpdateUI ();
+			}
 		}
+
 
 	}
 		
