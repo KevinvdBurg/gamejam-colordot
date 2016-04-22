@@ -8,6 +8,7 @@ public class Gamecontroller : MonoBehaviour {
 	public List<GameObject> allColors;
 	public CColor NeededColor;
 	public Text currentText;
+	public Image currentColor;
 	public int score;
 	public Text scoreText;
 
@@ -37,6 +38,7 @@ public class Gamecontroller : MonoBehaviour {
 	public void newColor(){
 		GameObject go = allColors[Random.Range (0, allColors.Count)];
 		NeededColor = go.GetComponent<CColor> ();
+		currentColor.color = NeededColor.color;
 		currentText.text = NeededColor.Name;
 		UpdateUI ();
 	}
