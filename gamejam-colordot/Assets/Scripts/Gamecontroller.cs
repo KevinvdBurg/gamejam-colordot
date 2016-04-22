@@ -27,10 +27,6 @@ public class Gamecontroller : MonoBehaviour {
 			timerTime -= Time.deltaTime;
 
 			TimeText.text = "Time Left: " + Mathf.Round(timerTime);
-//			if (timerTime <= (maxTime % 90)) {
-//				TimeText.color = new Color (255, 0, 0);
-//			} 
-			Debug.Log(timerTime);
 			if (timerTime <= 0.0f)
 			{
 				GameOver();
@@ -51,5 +47,6 @@ public class Gamecontroller : MonoBehaviour {
 
 	public void GameOver(){
 		GameStarted = false;
+		Application.LoadLevel("EndingScreen");
 	}
 }
