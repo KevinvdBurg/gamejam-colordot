@@ -21,6 +21,6 @@ public class Empty : MonoBehaviour {
 	}
 
 	public void SelectObject(){
-		mixController.currentColors.Clear ();
+		mixController.ResetColor ();
 	}
 }

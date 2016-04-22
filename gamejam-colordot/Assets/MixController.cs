@@ -13,10 +13,7 @@ public class MixController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		currentColors = new Dictionary<string, int>();
-		currentColors ["Red"] = 0;
-		currentColors ["Yellow"] = 0;
-		currentColors ["Blue"] = 0;
+		ResetColor ();
 	}
 	
 	// Update is called once per frame
@@ -45,16 +42,38 @@ public class MixController : MonoBehaviour {
 		Dictionary<string, int> d = new Dictionary<string, int>();
 		d = needed.getColorAmount ();
 
-//		if (d.Count == currentColors.Count) {
-//			foreach (var item in currentColors) {
-//				if (d.ContainsKey(item.name)) {
-//					
-//				}
-//					
-//			}
-////			return true;
-//		}
-		return false;
+		foreach (var item in d) {
+			if (item.Key == "Color Red") {
+				foreach (var item2 in currentColors) {
+					if (item2.Key == "Red") {
+						if (item.Value != item2.Value) {
+							return false;
+						}
+					}
+				}
+			}
+			if (item.Key == "Color Yellow") {
+				foreach (var item2 in currentColors) {
+					if (item2.Key == "Yellow") {
+						if (item.Value != item2.Value) {
+							return false;
+						}
+					}
+				}
+			}
+			if (item.Key == "Color Blue") {
+				foreach (var item2 in currentColors) {
+					if (item2.Key == "Blue") {
+						if (item.Value != item2.Value) {
+							return false;
+						}
+					}
+				}
+			}
+	
+		}
+
+		return true;
 	}
 
 	bool checkEa(Dictionary<string, int> dict, Dictionary<string, int> dict2){
@@ -83,5 +102,12 @@ public class MixController : MonoBehaviour {
 			}
 		}
 		return equal;
+	}
+
+	public void ResetColor(){
+		currentColors = new Dictionary<string, int>();
+		currentColors ["Red"] = 0;
+		currentColors ["Yellow"] = 0;
+		currentColors ["Blue"] = 0;
 	}
 }
