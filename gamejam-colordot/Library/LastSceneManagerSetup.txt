@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/PlayScreen.unity
+- path: Assets/_Scenes/Kevin-Scene.unity
   isLoaded: 1
   isActive: 1

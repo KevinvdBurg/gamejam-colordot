@@ -123,15 +123,15 @@ public class BodySourceView : MonoBehaviour
             LineRenderer lr = jointObj.AddComponent<LineRenderer>();
             lr.SetVertexCount(2);
             lr.material = BoneMaterial;
+            jointObj.transform.localScale = new Vector3(0, 0, 0);
             if (DrawSkeleton)
             {
                 lr.SetWidth(0.05f, 0.05f);
-                jointObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
             }
             else
             {
                 lr.SetWidth(0,0);
-                jointObj.transform.localScale = new Vector3(0,0,0);
+                
             }
 
             jointObj.name = jt.ToString();
